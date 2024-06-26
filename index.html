@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__title main__title-first">Best of</div>
+            </div>
+            <div class="main__wrapper">
+                <div class="main__text">
+                    СИМБИОЗ КОРНЕОТЕРАПЕВТИЧЕСКИХ РАЗРАБОТОК И НАТУРАЛЬНЫХ ПРИРОДНЫХ ИНГРИДИЕНТОВ</div>
+                <div class="main__title main__title-second">NATURE</div>
+            </div>
+
+        </div>
+    </section>
+    <section class="nou">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div style="background-image: url('./images/second.png');" class="nou-slide swiper-slide"></div>
+                <div style="background-image: url('./images/second.png');" class="nou-slide swiper-slide"></div>
+                <div style="background-image: url('./images/second.png');" class="nou-slide swiper-slide"></div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="replay">
+        <div class="container">
+            <div class="replay__title">
+                <span>ПОВТОРЯЕТ</span>
+            </div>
+            <div class="replay_box-wrapper">
+                <div class="replay_box replay_box1">
+                    <div class="replay_box-inner-wrapper">
+                        <div class="replay_box-plus"></div>
+                        <div class="replay_box-inner-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti illum odit
+                            molestiae? Repellendus corrupti voluptatem ducimus totam sit accusantium corporis iste
+                            consequatur, error tempora. Commodi hic rerum minima. Qui?
+                        </div>
+                    </div>
+                </div>
+                <div class="replay_box replay_box2">
+                    <div class="replay_box-inner-wrapper">
+                        <div class="replay_box-plus"></div>
+                        <div class="replay_box-inner-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti illum odit
+                            molestiae? Repellendus corrupti voluptatem ducimus totam sit accusantium corporis iste
+                            consequatur, error tempora. Commodi hic rerum minima. Qui?
+                        </div>
+                    </div>
+                </div>
+                <div class="replay_box replay_box3">
+                    <div class="replay_box-inner-wrapper">
+                        <div class="replay_box-plus"></div>
+                        <div class="replay_box-inner-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti illum odit
+                            molestiae? Repellendus corrupti voluptatem ducimus totam sit accusantium corporis iste
+                            consequatur, error tempora. Commodi hic rerum minima. Qui?
+                        </div>
+                    </div>
+                </div>
+                <div class="replay_box replay_box4">
+                    <div class="replay_box-inner-wrapper">
+                        <div class="replay_box-plus"></div>
+                        <div class="replay_box-inner-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda corrupti illum odit
+                            molestiae? Repellendus corrupti voluptatem ducimus totam sit accusantium corporis iste
+                            consequatur, error tempora. Commodi hic rerum minima. Qui?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-slider">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+    </section>
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'swiper-pagination-bullet',
+                bulletActiveClass: 'swiper-pagination-bullet-active',
+                renderBullet: function (index, className) {
+                    return `
+                        <span class="${className}">
+                            <svg viewBox="0 0 35 35">
+                                <circle class="inner-circle"></circle>
+                                <circle class="outer-circle"></circle>
+                            </svg>
+                        </span>`;
+                },
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+
+        swiper.on('slideChange', function () {
+            document.querySelectorAll('.swiper-pagination-bullet').forEach(bullet => {
+                bullet.classList.remove('swiper-pagination-bullet-active');
+            });
+            const activeBullet = document.querySelector('.swiper-pagination-bullet:nth-child(' + (swiper.realIndex + 1) + ')');
+            activeBullet.classList.add('swiper-pagination-bullet-active');
+        });
+
+        // Инициализация первого активного буллета
+        document.querySelector('.swiper-pagination-bullet').classList.add('swiper-pagination-bullet-active');
+    </script>
+</body>
+
+</html>
