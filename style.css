@@ -1,7 +1,11 @@
 /* common */
 
 :root {
-  --primary-color: #cb9e76
+  --primary-color: #cb9e76;
+  --secondary-color: #2F3338;
+  --primary-font-family: "Raleway", sans-serif;
+  --secondary-font-family: "Made The Artist";
+  --coff-desk: 19.2;
 }
 
 html,
@@ -25,6 +29,25 @@ body {
     url("./fonts/MADE-THEARTIST-SCRIPT-PERSONAL-USE.woff2") format("woff2");
 }
 
+.primary-title {
+  font-family: var(--primary-font-family);
+  font-size: 5vw;
+  font-weight: 300;
+  margin-bottom: 50px;
+  position: relative;
+  color: var(--secondary-color)
+}
+
+.primary-title:after {
+  position: absolute;
+  right: 50px;
+  top: 0;
+  font-family: var(--secondary-font-family);
+  font-size: 5vw;
+  color: var(--primary-color);
+  position: relative;
+}
+
 /* common */
 
 /* main begin */
@@ -43,20 +66,20 @@ body {
 }
 
 .main__title-first {
-  font-family: "Made The Artist";
+  font-family: var(--secondary-font-family);
   font-size: 15vw;
   line-height: 50%;
 }
 
 .main__title-second {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-style: normal;
   font-weight: 300;
   line-height: 80%;
 }
 
 .main__text {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   color: #fff;
   font-size: 19px;
   font-weight: 300;
@@ -141,10 +164,10 @@ body {
 
 .replay__title span {
   display: block;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-size: 121px;
   font-weight: 300;
-  color: #000;
+  color: var(--secondary-color);
 }
 
 .replay__title .move {
@@ -203,7 +226,7 @@ body {
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
-    background-color: #2F3338;
+    background-color: var(--secondary-color);
     border-radius: 100%;
     cursor: pointer;
     transition: all .4s ease-in-out;
@@ -224,7 +247,7 @@ body {
 
 
 .replay_box-inner-text {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   color: #fff;
   position: relative;
   z-index: 10;
@@ -260,10 +283,10 @@ body {
   top: 0;
   left: 0;
   transform: translate(-12px, -50%);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   line-height: 100%;
-  color: #000;
+  color: var(--secondary-color);
   font-size: 7.45vw;
 }
 
@@ -274,7 +297,7 @@ body {
   top: 0;
   left: 0;
   transform: translate(-12px, -50%);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   line-height: 100%;
   -webkit-text-fill-color: transparent;
@@ -293,10 +316,10 @@ body {
   top: 0;
   left: calc(-100% - 38px);
   transform: translate(-12px, -50%);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   line-height: 100%;
-  color: #000;
+  color: var(--secondary-color);
   font-size: 7.45vw;
 }
 
@@ -307,7 +330,7 @@ body {
   top: 0;
   left: calc(-100% - 38px);
   transform: translate(-12px, -50%);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-weight: 400;
   line-height: 100%;
   -webkit-text-fill-color: transparent;
@@ -319,28 +342,23 @@ body {
 
 /**/
 
+.main-slider {
+  padding-bottom: 300px;
+}
+
 .main-slider-swiper {
   width: 100%;
   height: 500px;
 }
 
+
+
 .main-slider__title {
-  font-family: "Raleway", sans-serif;
-  font-size: 5vw;
-  font-weight: 300;
-  margin-bottom: 50px;
-  position: relative;
+  font-family: var(--primary-font-family);
 }
 
 .main-slider__title:after {
   content: 'Bfn';
-  position: absolute;
-  right: 50px;
-  top: 0;
-  font-family: "Made The Artist";
-  font-size: 4.5vw;
-  color: var(--primary-color);
-  position: relative;
 }
 
 .main-slider-slide a {
@@ -357,16 +375,16 @@ body {
 
 .main-slider-slide__title {
   padding-top: 10px;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--primary-font-family);
   font-size: 20px;
-  color: #000;
+  color: var(--secondary-color);
   border-top: 1px solid #CB9E76
 }
 
 .main-slider-swiper-button {
   width: 63px !important ;
   height: 63px !important ;
-  border: 1px solid #000;
+  border: 1px solid var(--secondary-color);
   border-radius: 100%;
   top: 80% !important;
   bottom: 0 !important;
@@ -407,5 +425,215 @@ body {
 .main-slider-swiper-button:after {
   display: none;
 }
+
+/**/
+
+/**/
+
+.main-list {
+  padding-bottom: 300px;
+}
+
+.main-list__title:after {
+  content: 'свой уход'
+}
+
+.main-list__subtitle {
+  font-family: var(--primary-font-family);
+  color: var(--secondary-color);
+  font-size: 18px;
+  max-width: 530px;
+  margin-bottom: 102px;
+}
+
+.main-list__ol {
+  position: relative;
+  counter-reset: main-list-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.main-list__ol::before {
+  content: '';
+  position: absolute;
+  bottom: -97px;
+  left: -160px;
+  width: 750px;
+  height: 800px;
+  background-image: url('./images/main-list-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.main-list__li {
+  width: 85%; 
+  margin-bottom: 80px;
+  position: relative;
+  counter-increment: main-list-counter;
+  font-family: var(--primary-font-family);
+  font-size: 64px;
+  font-weight: 200;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.main-list__li span {
+  display: block;
+  text-align: right;
+}
+
+.main-list__li::before {
+  content: "0" counter(main-list-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--secondary-font-family);
+}
+
+/**/
+
+/**/
+
+.blog__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4.16vw
+}
+
+@media(min-width: 576px) {
+  .blog__wrapper {
+      gap:2.21vw
+  }
+}
+
+@media(min-width: 1200px) {
+  .blog__wrapper {
+      height:calc(1554vw/var(--coff-desk))
+  }
+}
+
+.blog__item {
+  background-color: pink;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  aspect-ratio: 1/1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: .6em;
+  line-height: 1.4;
+  flex: 0 0 calc(50% - 4.16vw)
+}
+
+.blog__item:nth-child(3n+1) {
+  flex: 0 0 calc(100% - 4.16vw)
+}
+
+@media(min-width: 576px) {
+  .blog__item,.blog__item:nth-child(3n+1) {
+      flex:0 0 calc(33.333% - 2.21vw)
+  }
+}
+
+@media(min-width: 1200px) {
+  .blog__item {
+      position:absolute;
+      padding: .9em;
+      flex: 0 0 auto
+  }
+
+  .blog__item:nth-child(3n+1) {
+      flex: 0 0 auto
+  }
+}
+
+@media(min-width: 1px) {
+  .blog__item {
+      font-size:calc(16vw/4.79)
+  }
+}
+
+@media(min-width: 480px) {
+  .blog__item {
+      font-size:calc(16vw/4.8)
+  }
+}
+
+@media(min-width: 576px) {
+  .blog__item {
+      font-size:calc(14vw/7.67)
+  }
+}
+
+@media(min-width: 768px) {
+  .blog__item {
+      font-size:calc(14vw/7.68)
+  }
+}
+
+@media(min-width: 864px) {
+  .blog__item {
+      font-size:calc(14vw/8.64)
+  }
+}
+
+@media(min-width: 1200px) {
+  .blog__item {
+      font-size:calc(28vw/19.2)
+  }
+}
+
+@media(min-width: 1920px) {
+  .blog__item {
+      font-size:calc(28vw/19.2)
+  }
+}
+
+@media(min-width: 1200px) {
+  .blog__item:first-child {
+      width:calc(530vw/var(--coff-desk));
+      top: calc(0vw/var(--coff-desk));
+      left: calc(0vw/var(--coff-desk))
+  }
+
+  .blog__item:nth-child(2) {
+      width: calc(625vw/var(--coff-desk));
+      top: calc(0vw/var(--coff-desk));
+      left: calc(565vw/var(--coff-desk))
+  }
+
+  .blog__item:nth-child(3) {
+      width: calc(375vw/var(--coff-desk));
+      top: calc(250vw/var(--coff-desk));
+      left: calc(1225vw/var(--coff-desk))
+  }
+
+  .blog__item:nth-child(4) {
+      width: calc(345vw/var(--coff-desk));
+      top: calc(565vw/var(--coff-desk));
+      left: calc(185vw/var(--coff-desk))
+  }
+
+  .blog__item:nth-child(6) {
+      width: calc(894vw/var(--coff-desk));
+      top: calc(660vw/var(--coff-desk));
+      left: calc(565vw/var(--coff-desk))
+  }
+
+  .blog__item:nth-child(5) {
+      width: calc(530vw/var(--coff-desk));
+      top: calc(945vw/var(--coff-desk));
+      left: calc(0vw/var(--coff-desk))
+  }
+}
+
+/**/
+
+/**/
+
+
 
 /**/
