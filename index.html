@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,53 @@
 </head>
 
 <body>
+    <header class="header" >
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <a href="#" class="header__link-text header__burger-btn">
+                        <span class="header__burger-icon" ></span>
+                        Меню
+                    </a>
+                    <a href="#" class="header__link-text header__catalog-btn">Магазин</a>
+                </div>
+                <div class="header__center">
+                    <a href="#">
+                        <div class="header__logo"></div>
+                    </a>
+                </div>
+                <div class="header__right">
+                    <a href="#" class="header__link-text" >+7 (925) 230 85 25</a>
+                    <a href="#" class="header__link-text header__icons header__fav " ></a>
+                    <a href="#" class="header__link-text header__icons header__account " ></a>
+                    <a href="#" class="header__link-text header__icons header__cart " ></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="menu d-none">
+        <div class="menu-white-bg"></div>
+        <div class="menu-trans-bg"></div>
+        <div class="container">
+            <nav class="menu__nav">
+                <ul class="menu__ul">
+                    <li class="menu__li">
+                        <a href="#">Подобрать уход</a>
+                    </li>
+                    <li class="menu__li">
+                        <a href="#">Корнеотерапия</a></li>
+                    <li class="menu__li">
+                        <a href="#">Бренд BFN</a></li>
+                    <li class="menu__li">
+                        <a href="#">Наше производство</a></li>
+                    <li class="menu__li">
+                        <a href="#">Публикации</a></li>
+                    <li class="menu__li">
+                        <a href="#">Доставка и оплата</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <section class="main">
         <div class="container">
             <div class="main__wrapper">
@@ -43,6 +91,8 @@
         </div>
     </section>
     <section class="replay">
+        <div class="leaf replay-leaf-1"></div>
+        <div class="leaf replay-leaf-2"></div>
         <div class="container">
             <div class="replay__title">
                 <span>ПОВТОРЯЕТ</span>
@@ -268,6 +318,7 @@
             },
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
